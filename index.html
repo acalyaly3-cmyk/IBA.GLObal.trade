@@ -1,93 +1,25 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IBA | Global Strategic Trade</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        :root { --navy: #001a33; --gold: #b89146; --white: #ffffff; --bg: #f8f9fa; }
-        body { font-family: 'Cairo', sans-serif; margin: 0; background: var(--bg); color: var(--navy); }
-        
-        nav { background: var(--navy); padding: 20px 5%; border-bottom: 4px solid var(--gold); text-align: center; }
-        .logo { color: var(--gold); font-size: 28px; font-weight: 900; letter-spacing: 2px; }
+    <div style="text-align: center; margin-bottom: 50px;">
+        <button onclick="downloadVCard()" style="background: white; color: var(--navy); border: 2px solid var(--gold); padding: 15px 30px; border-radius: 5px; font-weight: bold; cursor: pointer;">
+             📥 حفظ بيانات علي إبراهيم على هاتفك
+        </button>
+    </div>
 
-        .hero { background: linear-gradient(rgba(0,26,51,0.9), rgba(0,26,51,0.9)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1400'); background-size: cover; color: white; padding: 100px 5%; text-align: center; }
-        .hero h1 { font-size: 45px; color: var(--gold); margin: 0; }
-        
-        .section { padding: 60px 8%; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
-        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); border-right: 5px solid var(--gold); }
-
-        /* Form Styling */
-        .order-section { background: var(--navy); color: white; padding: 80px 8%; border-radius: 0; }
-        .order-form { max-width: 600px; margin: 30px auto; background: rgba(255,255,255,0.1); padding: 40px; border-radius: 15px; border: 1px solid var(--gold); }
-        .order-form input, .order-form select, .order-form textarea { width: 100%; padding: 12px; margin: 10px 0; border-radius: 5px; border: none; font-family: 'Cairo'; }
-        .submit-btn { width: 100%; background: var(--gold); color: var(--navy); padding: 15px; border: none; border-radius: 5px; font-weight: 900; font-size: 18px; cursor: pointer; transition: 0.3s; }
-        .submit-btn:hover { background: white; }
-
-        .wa-float { position: fixed; bottom: 30px; left: 30px; background: #25d366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); z-index: 10000; text-decoration: none; }
-        footer { background: #000; color: #666; padding: 30px; text-align: center; font-size: 14px; }
-    </style>
-</head>
-<body>
-
-    <nav><div class="logo">IBA | WORLDWIDE MANAGEMENT</div></nav>
-
-    <section class="hero">
-        <h1>إدارة التجارة العالمية المباشرة</h1>
-        <p>ربط قارات العالم بكفاءة IBA - من الشرق الأوسط وأفريقيا إلى أوروبا وكافة الأسواق الدولية</p>
-    </section>
-
-    <section class="section">
-        <div class="grid">
-            <div class="card">
-                <h3>تغطية أفريقيا والشرق الأوسط</h3>
-                <p>إدارة مباشرة لعقود التوريد في أكبر الأسواق العربية والأفريقية بضمان الجودة والالتزام.</p>
-            </div>
-            <div class="card">
-                <h3>الربط الأوروبي والعالمي</h3>
-                <p>سلاسل إمداد لوجستية تربط محاصيلنا ومنتجاتنا بكافة الموانئ الدولية وفق معايير الـ EU و Global GAP.</p>
-            </div>
-            <div class="card">
-                <h3>تنفيذ الصفقات المباشرة</h3>
-                <p>بدون وسطاء .. نحن نصمم الصفقة، ندير اللوجستيات، ونضمن النتائج للطرفين.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="order-section">
-        <h2 style="text-align: center; color: var(--gold);">تقديم طلب توريد عالمي</h2>
-        <p style="text-align: center;">Global Procurement Request</p>
-        
-        <div class="order-form">
-            <form action="mailto:acalyaly3@gmail.com" method="post" enctype="text-plain">
-                <input type="text" name="name" placeholder="اسم الشركة / المشتري" required>
-                <input type="text" name="product" placeholder="المنتج المطلوب (بصل، موالح، إلخ)" required>
-                <input type="text" name="quantity" placeholder="الكمية المطلوبة (بالطن)" required>
-                <select name="destination">
-                    <option value="">دولة الاستلام</option>
-                    <option value="Gulf">دول الخليج</option>
-                    <option value="Europe">أوروبا</option>
-                    <option value="Africa">أفريقيا</option>
-                    <option value="Other">دول العالم الأخرى</option>
-                </select>
-                <textarea name="message" rows="4" placeholder="مواصفات إضافية"></textarea>
-                <button type="submit" class="submit-btn">إرسال الطلب للإدارة</button>
-            </form>
-        </div>
-
-        <div style="text-align: center; margin-top: 40px;">
-            <p>الهواتف المباشرة: 01017979565 | 01044581140 | 01114000122</p>
-        </div>
-    </section>
-
-    <a href="https://wa.me/201017979565" class="wa-float" target="_blank">💬</a>
-
-    <footer>
-        <p>IBA Global Trade &copy; 2026 | World Executive Management | Ali Ibrahim</p>
-        <p><a href="https://www.linkedin.com/groups/17618054" style="color: var(--gold); text-decoration: none;">Global Network LinkedIn</a></p>
-    </footer>
-
-</body>
-</html>
+    <script>
+        function downloadVCard() {
+            const vcard = "BEGIN:VCARD\n" +
+                          "VERSION:3.0\n" +
+                          "FN:Ali Ibrahim | IBA Global Trade\n" +
+                          "TEL;TYPE=CELL:01017979565\n" +
+                          "TEL;TYPE=WORK:01044581140\n" +
+                          "TEL;TYPE=HOME:01114000122\n" +
+                          "EMAIL:acalyaly3@gmail.com\n" +
+                          "URL:https://acalyaly3-cmyk.github.io/IBA.GLObal.trade/\n" +
+                          "END:VCARD";
+            const blob = new Blob([vcard], { type: "text/vcard" });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "Ali_Ibrahim_IBA.vcf";
+            a.click();
+        }
+    </script>
