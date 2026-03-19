@@ -5,83 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IBA | Global Trade - Ali Ibrahim</title>
     <style>
-        :root { --primary: #002347; --accent: #b89146; --white: #ffffff; --bg: #f4f7f6; }
-        body { font-family: 'Cairo', sans-serif; margin: 0; background-color: var(--bg); color: #333; }
-        
-        /* Navbar */
-        nav { background: var(--primary); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--accent); }
-        nav .logo { color: var(--accent); font-size: 24px; font-weight: bold; text-decoration: none; }
-        
-        /* Hero Section */
-        .hero { background: linear-gradient(rgba(0,35,71,0.8), rgba(0,35,71,0.8)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1350&q=80'); background-size: cover; height: 450px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; text-align: center; padding: 0 20px; }
-        .hero h1 { font-size: 48px; margin-bottom: 10px; color: var(--accent); }
-        .hero p { font-size: 20px; max-width: 700px; }
-
-        /* Strategy Pillars */
-        .section-title { text-align: center; margin: 50px 0 30px; font-size: 32px; color: var(--primary); }
-        .pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 0 10%; margin-bottom: 50px; }
-        .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border-right: 5px solid var(--accent); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { color: var(--primary); margin-top: 0; }
-
-        /* Contact Section */
-        .contact-bar { background: var(--primary); color: white; padding: 40px 10%; text-align: center; }
-        .contact-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px; }
-        .btn { padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-        .btn-gold { background: var(--accent); color: var(--primary); }
-        .btn-outline { border: 1px solid var(--accent); color: var(--accent); }
-
-        /* Floating WhatsApp */
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; }
-        
-        footer { background: #001a33; color: #888; text-align: center; padding: 20px; font-size: 14px; }
+        :root { --navy: #002347; --gold: #b89146; --white: #ffffff; }
+        body { font-family: 'Cairo', sans-serif; margin: 0; background: #fdfdfd; }
+        .top-bar { background: var(--navy); color: var(--gold); padding: 10px 5%; display: flex; justify-content: space-between; font-size: 14px; border-bottom: 2px solid var(--gold); }
+        header { background: white; padding: 20px 5%; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center; }
+        .hero { background: linear-gradient(45deg, var(--navy), #004080); color: white; padding: 80px 5%; text-align: center; }
+        .hero h1 { font-size: 40px; color: var(--gold); margin: 0; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 50px 5%; }
+        .service-card { background: white; border: 1px solid #eee; padding: 40px; border-radius: 15px; text-align: center; transition: 0.3s; }
+        .service-card:hover { border-color: var(--gold); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .service-card i { font-size: 40px; color: var(--gold); }
+        .cta-section { background: var(--gold); color: var(--navy); padding: 40px; text-align: center; font-weight: bold; }
+        .wa-btn { position: fixed; bottom: 30px; left: 30px; background: #25d366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; text-decoration: none; box-shadow: 0 5px 20px rgba(0,0,0,0.2); z-index: 1000; }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav>
-        <a href="#" class="logo">IBA | Global Trade</a>
-    </nav>
+    <div class="top-bar">
+        <span>Global Trade & Supply Chain Specialist</span>
+        <div>01017979565 | 01044581140</div>
+    </div>
+
+    <header>
+        <h2 style="margin:0; color: var(--navy);">IBA | <span style="color: var(--gold);">Global Trade</span></h2>
+    </header>
 
     <section class="hero">
         <h1>علي إبراهيم</h1>
-        <p>الاستراتيجية المهنية: الوسطاء، الاستيراد، سلاسل الإمداد، والرؤى التجارية</p>
+        <p>IBA | Global Deal Maker & International Supply Chain Specialist</p>
+        <div style="margin-top:20px;">
+            <span style="border: 1px solid var(--gold); padding: 5px 15px; border-radius: 20px;">Egypt</span>
+            <span style="border: 1px solid var(--gold); padding: 5px 15px; border-radius: 20px;">Algeria</span>
+            <span style="border: 1px solid var(--gold); padding: 5px 15px; border-radius: 20px;">Gulf Markets</span>
+        </div>
     </section>
 
-    <h2 class="section-title">ركائزنا الاستراتيجية</h2>
-    <div class="pillars">
-        <div class="card">
-            <h3>الوسطاء</h3>
-            <p>بناء شبكة تواصل قوية تربط المنتجين بالمستوردين الدوليين بضمانات تجارية كاملة.</p>
-        </div>
-        <div class="card">
+    <div class="grid">
+        <div class="service-card">
             <h3>الاستيراد والتصدير</h3>
-            <p>إدارة العمليات التجارية بين مصر والجزائر والخليج وأوروبا بكفاءة وجودة عالية.</p>
+            <p>حلول متكاملة لنقل الخضروات والفواكه والمحاصيل الزراعية من الحقل إلى المشتري الدولي.</p>
         </div>
-        <div class="card">
+        <div class="service-card">
             <h3>سلاسل الإمداد</h3>
-            <p>حلول لوجستية متكاملة تضمن تدفق البضائع بأقل التكاليف وأسرع الأوقات.</p>
+            <p>إدارة لوجستية احترافية تضمن تقليل الفاقد وتسريع زمن الوصول للأسواق الأوروبية والخليجية.</p>
         </div>
-        <div class="card">
-            <h3>الرؤى والتحليلات</h3>
-            <p>تقديم دراسات سوقية دقيقة لمديري المشتريات والموردين لاتخاذ قرارات مبنية على بيانات.</p>
+        <div class="service-card">
+            <h3>رؤى السوق (Insights)</h3>
+            <p>تزويد مديري المشتريات والموردين ببيانات دقيقة عن الأسعار والتوجهات العالمية.</p>
         </div>
     </div>
 
-    <section class="contact-bar">
-        <h2>هل أنت جاهز لبدء صفقتك القادمة؟</h2>
-        <div class="contact-buttons">
-            <a href="mailto:acalyaly3@gmail.com" class="btn btn-gold">ارسل إيميل الآن</a>
-            <a href="https://www.linkedin.com/groups/17618054" class="btn btn-outline" target="_blank">LinkedIn Group</a>
-        </div>
-        <p style="margin-top: 20px; font-size: 14px;">الهواتف: 01017979565 | 01044581140 | 01114000122</p>
+    <section class="cta-section">
+        <p style="font-size: 24px;">نتحدث لغة الصفقات الناجحة</p>
+        <p>Expertise in Brokers, Imports, Supply Chain, and Insights.</p>
     </section>
 
-    <a href="https://wa.me/201017979565" class="wa-float" target="_blank">💬</a>
+    <a href="https://wa.me/201017979565" class="wa-btn">💬</a>
 
-    <footer>
-        &copy; 2026 IBA Global Trade. All Rights Reserved. Designed for Ali Ibrahim.
+    <footer style="background: var(--navy); color: white; padding: 40px; text-align: center;">
+        <p>Contact: acalyaly3@gmail.com</p>
+        <p><a href="https://www.linkedin.com/groups/17618054" style="color: var(--gold); text-decoration: none;">Join our IBA LinkedIn Group</a></p>
     </footer>
 
 </body>
