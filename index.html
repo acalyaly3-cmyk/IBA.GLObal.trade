@@ -3,27 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IBA | Direct Global Trade</title>
+    <title>IBA | Global Trade - Direct Management</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --navy: #001f3f; --gold: #c5a059; --bg: #f8f9fa; }
-        body { font-family: 'Cairo', sans-serif; margin: 0; background: var(--bg); color: var(--navy); }
+        :root { --navy: #001a33; --gold: #b89146; --white: #ffffff; }
+        body { font-family: 'Cairo', sans-serif; margin: 0; background: #fdfdfd; color: var(--navy); }
         
         /* Navigation */
-        nav { background: var(--navy); padding: 20px 5%; border-bottom: 4px solid var(--gold); text-align: center; }
-        nav .brand { color: var(--gold); font-size: 28px; font-weight: bold; letter-spacing: 2px; }
+        nav { background: var(--navy); padding: 25px 5%; border-bottom: 5px solid var(--gold); text-align: center; }
+        .logo { color: var(--gold); font-size: 30px; font-weight: bold; letter-spacing: 3px; }
 
         /* Hero */
-        .hero { background: linear-gradient(rgba(0,31,63,0.85), rgba(0,31,63,0.85)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1000'); background-size: cover; background-position: center; color: white; padding: 100px 5%; text-align: center; }
-        .hero h1 { font-size: 45px; margin-bottom: 10px; color: var(--gold); }
-        .hero p { font-size: 22px; max-width: 800px; margin: 0 auto; opacity: 0.9; }
+        .hero { background: linear-gradient(rgba(0,26,51,0.9), rgba(0,26,51,0.9)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=1200'); background-size: cover; color: white; padding: 120px 5%; text-align: center; }
+        .hero h1 { font-size: 50px; margin: 0; color: var(--gold); }
+        .hero p { font-size: 24px; margin-top: 15px; opacity: 0.9; }
 
-        /* Direct Pillars */
-        .section { padding: 80px 8%; }
+        /* Strategy */
+        .section { padding: 80px 10%; }
+        .section-title { text-align: center; font-size: 32px; margin-bottom: 50px; color: var(--navy); border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 10px; width: 100%; }
+        
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .pillar-card { background: white; padding: 40px; border-radius: 5px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; border-top: 5px solid var(--gold); }
-        .pillar-card h3 { font-size: 24px; margin-bottom: 20px; color: var(--navy); }
-        .pillar-card p { line-height: 1.8; color: #555; }
+        .card { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); border-right: 6px solid var(--gold); }
+        .card h3 { font-size: 24px; color: var(--navy); margin-bottom: 15px; }
+        .card p { line-height: 1.8; color: #444; }
 
-        /* Call to Action */
-        .cta-bar { background: var(--gold); color: var(--navy); padding: 40px; text-align: center; font-weight: bold; font-size: 20px; }
+        /* Locations */
+        .locations { background: var(--navy); color: white; padding: 50px; text-align: center; }
+        .loc-tag { display: inline-block; padding: 8px 20px; border: 1px solid var(--gold); margin: 5px; border-radius: 20px; font-weight: bold; }
+
+        /* Direct Contact Buttons */
+        .contact-area { padding: 60px 10%; text-align: center; background: #f4f4f4; }
+        .call-btn { background: var(--navy); color: var(--gold); padding: 20px 40px; text-decoration: none; display: inline-block; border-radius: 8px; font-weight: bold; margin: 10px; font-size: 20px; transition: 0.3s; border: 2px solid var(--navy); }
+        .call-btn:hover { background: transparent; color: var(--navy); }
+        
+        /* Floating WhatsApp */
+        .wa-float { position: fixed; bottom: 30px; left: 30px; background: #25d366; color: white; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); z-index: 9999; text-decoration: none; }
+
+        footer { background: #000d1a; color: #666; padding: 30px; text-align: center; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">IBA | GLOBAL TRADE</div>
+    </nav>
+
+    <section class="hero">
+        <h1>علي إبراهيم</h1>
+        <p>إدارة استراتيجية مباشرة لسلاسل الإمداد الدولية وعقود الاستيراد</p>
+    </section>
+
+    <div class="locations">
+        <span class="loc-tag">EGYPT</span>
+        <span class="loc-tag">ALGERIA</span>
+        <span class="loc-tag">UAE</span>
+        <span class="loc-tag">SAUDI ARABIA</span>
+        <span class="loc-tag">EUROPE</span>
+    </div>
+
+    <section class="section">
+        <h2 class="section-title">ركائز
