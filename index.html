@@ -1,13 +1,89 @@
-<div class="card">
-    <i class="fas fa-rocket"></i>
-    <h3>تشغيل المنصات الجاهزة</h3>
-    <p>نمنحك حق الانتفاع ببنية تحتية رقمية متكاملة. استلم "منصتك الذكية" مفعلة ومربوطة بأنظمة الإدارة، وابدأ رفع أعمالك فوراً بنظام الاشتراك التشغيلي.</p>
-</div>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vortex 360 | منصة التشغيل الذكي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #00d2ff; --dark: #000428; --gold: #ffd700; --white: #ffffff; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: var(--dark); color: var(--white); text-align: center; line-height: 1.6; }
+        
+        /* هيدر المنصة */
+        header { padding: 120px 20px; background: linear-gradient(rgba(0,4,40,0.85), rgba(0,4,40,0.85)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1500'); background-size: cover; border-bottom: 4px solid var(--primary); }
+        h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 0; color: var(--primary); text-shadow: 0 0 25px var(--primary); }
+        .tagline { font-size: 1.5rem; color: var(--gold); margin: 20px 0; font-weight: bold; }
 
-<div class="explain-box">
-    <h3 style="color: var(--gold);"><i class="fas fa-shield-alt"></i> ما هو نظام "الاشتراك التشغيلي"؟</h3>
-    <p style="font-size: 1.2rem; line-height: 1.8;">
-        بدلاً من تحمل تكاليف التأسيس البرمجي الباهظة، نحن نوفر لك <strong>بيئة عمل رقمية جاهزة</strong>. 
-        أنت تركز على "جوهر عملك" ورفع منتجاتك، ونحن نتولى "القوة التقنية" والتحديثات المستمرة لضمان بقاء منصتك في القمة.
-    </p>
-</div>
+        /* أزرار الحركة */
+        .btn-group { margin-top: 30px; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+        .btn { padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; cursor: pointer; }
+        .btn-primary { background: var(--primary); color: var(--dark); }
+        .btn-gold { background: var(--gold); color: var(--dark); }
+        .btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+
+        /* عرض الخدمات (الملف التعريفي) */
+        .section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .card { background: rgba(255,255,255,0.05); padding: 35px; border-radius: 20px; border: 1px solid rgba(0, 210, 255, 0.2); text-align: right; }
+        .card i { font-size: 3rem; color: var(--primary); margin-bottom: 20px; display: block; text-align: center; }
+        .card h3 { color: var(--gold); margin-bottom: 15px; border-bottom: 1px solid var(--primary); padding-bottom: 10px; }
+
+        /* منطقة الاشتراك التشغيلي */
+        .op-subscription { background: rgba(255,215,0,0.05); border: 2px dashed var(--gold); padding: 40px; border-radius: 30px; margin-top: 50px; }
+        
+        footer { background: #000; padding: 40px; margin-top: 100px; opacity: 0.8; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>VORTEX 360</h1>
+        <p class="tagline">شريكك في التمكين والتشغيل الرقمي</p>
+        <p>بإشراف المدير التنفيذي: <strong>علي إبراهيم</strong></p>
+        <div class="btn-group">
+            <a href="https://wa.me/201017979565" class="btn btn-gold">ابدأ تجربتك المجانية (7 أيام)</a>
+            <a href="#services" class="btn btn-primary">استعراض ملف الخدمات</a>
+        </div>
+    </header>
+
+    <div id="services" class="section">
+        <h2 style="font-size: 2.5rem; color: var(--primary);">دليل الخدمات التشغيلية الذكية</h2>
+        
+        <div class="grid">
+            <div class="card">
+                <i class="fas fa-microchip"></i>
+                <h3>محركات الذكاء الاصطناعي</h3>
+                <p>ندمج خوارزميات AI في صميم أعمالك لأتمتة المهام الصعبة وتوفير الوقت والجهد بنسبة 40%.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-network"></i>
+                <h3>تحليل البيانات الاستراتيجي</h3>
+                <p>نحول بياناتك إلى رؤى واضحة تساعدك على اتخاذ قرارات التوسع في أسواق العراق والخليج بثقة.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-broadcast-tower"></i>
+                <h3>التسويق الرقمي الموجه</h3>
+                <p>نصنع لك حضوراً رقمياً قوياً يستهدف كبار المستوردين والشركات الدولية بدقة واحترافية.</p>
+            </div>
+        </div>
+
+        <div class="op-subscription">
+            <h3 style="color: var(--gold); font-size: 2rem;">نظام "الاشتراك التشغيلي"</h3>
+            <p style="font-size: 1.2rem;">نحن لا نبيعك برمجيات صامتة، نحن نمنحك <strong>حق الانتفاع بمنصاتنا الجاهزة</strong>:</p>
+            <ul style="display: inline-block; text-align: right; margin: 20px 0;">
+                <li>✅ ارفع أعمالك ومنتجاتك فوراً على منصتنا المستقرة.</li>
+                <li>✅ استمتع بدعم فني مستمر وتحديثات أمنية دورية.</li>
+                <li>✅ وفر تكاليف التأسيس البرمجي الباهظة مقابل اشتراك تشغيل بسيط.</li>
+            </ul>
+            <br>
+            <p><strong>"أنت تركز على تجارتك.. ونحن نتولى القوة التقنية"</strong></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>للتواصل المباشر: 01017979565 | acalyaly3@gmail.com</p>
+        <p>&copy; 2026 Vortex 360 Systems | Powered by IBA Global Intelligence</p>
+    </footer>
+
+</body>
+</html>
