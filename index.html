@@ -3,47 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vortex 360 | Digital Operations</title>
+    <title>Vortex 360 | Luxury Digital Operations</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --primary: #00d2ff; --dark: #000428; --gold: #ffd700; }
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: var(--dark); color: white; text-align: center; }
-        header { padding: 100px 20px; background: linear-gradient(rgba(0,4,40,0.8), rgba(0,4,40,0.8)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1500'); background-size: cover; border-bottom: 4px solid var(--primary); }
-        h1 { font-size: 4rem; color: var(--primary); text-shadow: 0 0 20px var(--primary); margin: 0; }
-        .tagline { color: var(--gold); font-size: 1.5rem; margin: 20px 0; font-weight: bold; }
-        .section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; border: 1px solid rgba(0,210,255,0.2); text-align: left; }
-        .card h3 { color: var(--gold); border-bottom: 1px solid var(--primary); padding-bottom: 10px; }
-        .contact-box { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; min-width: 200px; margin: 10px; border: 1px solid var(--primary); }
-        footer { background: #000; padding: 60px 20px; border-top: 1px solid var(--primary); }
-        a { color: var(--primary); text-decoration: none; font-weight: bold; }
+        :root { 
+            --primary: #00d2ff; 
+            --dark: #020617; 
+            --gold: #fcc419; 
+            --card-bg: rgba(255, 255, 255, 0.03);
+        }
+        body { 
+            font-family: 'Inter', 'Segoe UI', sans-serif; 
+            margin: 0; 
+            background: var(--dark); 
+            color: #f8fafc; 
+            overflow-x: hidden;
+        }
+        
+        /* Header Hero Section */
+        header { 
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, rgba(0, 210, 255, 0.1) 0%, transparent 70%), 
+                        linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.9)), 
+                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1500');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 { 
+            font-size: clamp(3rem, 12vw, 6rem); 
+            margin: 0; 
+            background: linear-gradient(to right, #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 15px rgba(0, 210, 255, 0.5));
+            letter-spacing: -2px;
+            font-weight: 900;
+        }
+
+        .tagline { 
+            color: var(--gold); 
+            font-size: 1.4rem; 
+            margin: 20px 0; 
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .manager {
+            font-size: 1.1rem;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* Services Grid */
+        .section { padding: 100px 20px; max-width: 1100px; margin: 0 auto; }
+        
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+        }
+
+        .card { 
+            background: var(--card-bg); 
+            padding: 40px 30px; 
+            border-radius: 24px; 
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+            text-align: left;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            backdrop-filter: blur(10px);
+        }
+
+        .card:hover { 
+            transform: translateY(-10px); 
+            border-color: var(--primary);
+            background: rgba(0, 210, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 20px; }
+        .card h3 { color: #fff; font-size: 1.5rem; margin-bottom: 15px; }
+        .card p { color: #94a3b8; font-size: 1rem; line-height: 1.6; }
+
+        /* Contacts Footer */
+        footer { 
+            background: #000; 
+            padding: 100px 20px; 
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        .contact-box { 
+            background: rgba(255,255,255,0.03); 
+            padding: 25px; 
+            border-radius: 20px; 
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+
+        .contact-box:hover { border-color: var(--gold); }
+        .contact-box p { font-size: 1.2rem; font-weight: 700; margin: 10px 0; color: var(--gold); }
+        
+        .wa-link { 
+            color: var(--primary); 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .email { color: #94a3b8; margin-top: 40px; display: block; text-decoration: none; }
+        .copyright { margin-top: 50px; opacity: 0.3; font-size: 0.8rem; }
     </style>
 </head>
 <body>
     <header>
         <h1>VORTEX 360</h1>
-        <p class="tagline">Strategic Digital Operations & AI Solutions</p>
-        <p>Executive Manager: <strong>Ali Ibrahim</strong></p>
+        <p class="tagline">Strategic Operations & AI Solutions</p>
+        <p class="manager">Executive Manager: <strong>Ali Ibrahim</strong></p>
     </header>
 
     <div class="section">
         <div class="grid">
-            <div class="card"><h3>AI Solutions</h3><p>Custom algorithms for business automation and predictive market analysis.</p></div>
-            <div class="card"><h3>Data Engineering</h3><p>Real-time strategic dashboards for global trade decision making.</p></div>
-            <div class="card"><h3>Operational Subscription</h3><p>Instant deployment of business assets with full technical management.</p></div>
+            <div class="card">
+                <i class="fas fa-brain"></i>
+                <h3>AI Solutions</h3>
+                <p>Advanced custom algorithms designed for industrial automation and precise market forecasting.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Data Engineering</h3>
+                <p>High-performance dashboards and data pipelines for strategic international trade analytics.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-cloud-bolt"></i>
+                <h3>Operational Subscription</h3>
+                <p>Seamless digital scaling with zero infrastructure worries. Fully managed technical ecosystem.</p>
+            </div>
         </div>
     </div>
 
     <footer>
-        <h2 style="color: var(--gold);">Contact Management</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
-            <div class="contact-box"><p>01017979565</p><a href="https://wa.me/201017979565">WhatsApp</a></div>
-            <div class="contact-box"><p>01044581140</p><a href="https://wa.me/201044581140">WhatsApp</a></div>
-            <div class="contact-box"><p>01114000122</p><a href="https://wa.me/201114000122">WhatsApp</a></div>
+        <h2 style="color: #fff; font-size: 2rem;">Global Contact Center</h2>
+        <div class="contact-grid">
+            <div class="contact-box">
+                <i class="fab fa-whatsapp" style="color:#25d366"></i>
+                <p>01017979565</p>
+                <a href="https://wa.me/201017979565" class="wa-link">Direct WhatsApp</a>
+            </div>
+            <div class="contact-box">
+                <i class="fab fa-whatsapp" style="color:#25d366"></i>
+                <p>01044581140</p>
+                <a href="https://wa.me/201044581140" class="wa-link">Direct WhatsApp</a>
+            </div>
+            <div class="contact-box">
+                <i class="fab fa-whatsapp" style="color:#25d366"></i>
+                <p>01114000122</p>
+                <a href="https://wa.me/201114000122" class="wa-link">Direct WhatsApp</a>
+            </div>
         </div>
-        <p style="margin-top: 30px;">Email: acalyaly3@gmail.com</p>
-        <p style="opacity: 0.5;">&copy; 2026 Vortex 360 | Powered by IBA Global</p>
+        <a href="mailto:acalyaly3@gmail.com" class="email">acalyaly3@gmail.com</a>
+        <p class="copyright">&copy; 2026 VORTEX 360 | PARTNER OF IBA GLOBAL</p>
     </footer>
 </body>
 </html>
