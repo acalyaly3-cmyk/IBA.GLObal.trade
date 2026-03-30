@@ -3,109 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vortex 360 | الذكاء الاصطناعي.. القوة الدافعة لأعمالك</title>
+    <title>Vortex 360 | منصة الأعمال والذكاء الاصطناعي</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --primary: #004e92; --secondary: #000428; --accent: #00d2ff; --gold: #ffd700; --odoo-purple: #714B67; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: var(--secondary); color: white; text-align: center; overflow-x: hidden; }
+        :root { --primary: #00d2ff; --dark: #000428; --gold: #ffd700; --white: #ffffff; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: var(--dark); color: var(--white); text-align: center; }
         
-        /* هيدر سينمائي بتكامل Odoo */
-        header { padding: 130px 20px; background: linear-gradient(rgba(0,4,40,0.85), rgba(0,78,146,0.85)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1500'); background-size: cover; background-position: center; border-bottom: 5px solid var(--odoo-purple); position: relative; }
-        
-        .partner-badge { display: inline-block; background: white; padding: 10px 25px; border-radius: 50px; margin-bottom: 25px; box-shadow: 0 0 25px rgba(113, 75, 103, 0.6); }
-        .partner-badge img { height: 45px; vertical-align: middle; }
-        .partner-badge span { color: var(--odoo-purple); font-weight: bold; margin-right: 12px; font-size: 1.2rem; }
+        header { padding: 140px 20px; background: linear-gradient(rgba(0,4,40,0.8), rgba(0,4,40,0.8)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1500'); background-size: cover; border-bottom: 4px solid var(--primary); }
+        h1 { font-size: 4.5rem; margin: 0; color: var(--primary); text-shadow: 0 0 25px var(--primary); }
+        .tagline { font-size: 1.8rem; color: var(--gold); margin: 20px 0; }
 
-        h1 { font-size: 4.8rem; margin: 0; color: var(--accent); text-shadow: 0 0 35px var(--accent); text-transform: uppercase; }
-        .tagline { font-size: 1.8rem; color: var(--gold); margin: 25px 0; font-weight: bold; }
-        
-        .btn-main { display: inline-block; padding: 20px 50px; background: var(--gold); color: var(--secondary); text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.3rem; transition: 0.4s; border: 2px solid transparent; }
-        .btn-main:hover { background: transparent; color: var(--gold); border-color: var(--gold); transform: scale(1.05); }
+        .btn-rent { display: inline-block; padding: 20px 50px; background: var(--primary); color: var(--dark); text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.3rem; margin-top: 30px; transition: 0.4s; }
+        .btn-rent:hover { background: var(--gold); transform: scale(1.05); }
 
-        /* شبكة الخدمات المطورة */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; padding: 100px 20px; max-width: 1400px; margin: 0 auto; }
-        .service-card { background: rgba(255, 255, 255, 0.04); padding: 50px; border-radius: 30px; border: 1px solid rgba(0, 210, 255, 0.1); transition: 0.5s; position: relative; }
-        .service-card:hover { transform: translateY(-25px); background: rgba(0, 210, 255, 0.12); border-color: var(--gold); box-shadow: 0 25px 60px rgba(0,0,0,0.6); }
-        .service-card i { font-size: 4.5rem; color: var(--accent); margin-bottom: 30px; }
-        .service-card h3 { font-size: 2rem; color: var(--gold); margin-bottom: 20px; }
-        .service-card ul { text-align: right; padding-right: 20px; color: rgba(255,255,255,0.8); line-height: 1.8; }
-        .service-card ul li { margin-bottom: 10px; list-style: circle; }
+        /* قسم رفع الأعمال */
+        .marketplace-section { padding: 100px 20px; max-width: 1200px; margin: 0 auto; }
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .card { background: rgba(255,255,255,0.05); padding: 40px; border-radius: 25px; border: 1px solid rgba(0, 210, 255, 0.2); transition: 0.5s; text-align: right; }
+        .card:hover { border-color: var(--gold); transform: translateY(-15px); background: rgba(0, 210, 255, 0.1); }
+        .card i { font-size: 3.5rem; color: var(--primary); margin-bottom: 25px; display: block; text-align: center; }
+        .card h3 { color: var(--gold); font-size: 1.8rem; margin-bottom: 15px; }
 
-        /* تذييل الصفحة والقنوات */
-        .footer-section { background: rgba(0, 0, 0, 0.7); padding: 80px 20px; border-top: 3px solid var(--accent); }
-        .social-btn { padding: 18px 35px; border-radius: 18px; text-decoration: none; color: white; font-weight: bold; margin: 12px; display: inline-block; transition: 0.3s; font-size: 1.1rem; }
-        .wa { background: #25D366; } .li { background: #0077b5; }
-        .social-btn:hover { opacity: 0.8; transform: translateY(-7px); }
-
-        footer { padding: 30px; opacity: 0.6; font-size: 1rem; background: #000; }
+        .explain-box { background: rgba(255,215,0,0.1); padding: 40px; border-radius: 20px; margin-top: 60px; border: 1px dashed var(--gold); }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="partner-badge">
-            <span>Official Partner</span>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Odoo_logo.svg/1200px-Odoo_logo.svg.png" alt="Odoo Logo">
-        </div>
         <h1>VORTEX 360</h1>
-        <p class="tagline">نصمم "عقولاً رقمية" تخدم أعمالك</p>
-        <p style="font-size: 1.3rem;">بإشراف الخبير والمطور المعتمد: <strong>علي إبراهيم</strong></p>
-        <div class="cta-group">
-            <a href="#" class="btn-main"><i class="fas fa-file-pdf"></i> تحميل ملف الخدمات الذكي (PDF)</a>
-        </div>
+        <p class="tagline">منصتك الرقمية الجاهزة للانطلاق</p>
+        <p>تحت إدارة: <strong>علي إبراهيم</strong></p>
+        <a href="https://wa.me/201017979565" class="btn-rent"><i class="fas fa-rocket"></i> احجز مساحتك وارفع شغلك الآن</a>
     </header>
 
-    <div class="services-grid">
-        <div class="service-card">
-            <i class="fas fa-brain"></i>
-            <h3>الذكاء الاصطناعي (AI) Solutions</h3>
-            <ul>
-                <li><strong>أتمتة العمليات:</strong> تقليل الهدر البشري والخطأ بنسبة تصل لـ 30%.</li>
-                <li><strong>التنبؤ بالسوق:</strong> خوارزميات لتحليل اتجاهات التصدير ومواسم الطلب.</li>
-                <li><strong>التعرف الذكي:</strong> أنظمة تحليل جودة المنتجات (مثل المحاصيل) آلياً.</li>
-            </ul>
+    <div class="marketplace-section">
+        <h2 style="font-size: 2.5rem; margin-bottom: 50px;">لماذا تختار منصة Vortex 360؟</h2>
+        
+        <div class="feature-grid">
+            <div class="card">
+                <i class="fas fa-upload"></i>
+                <h3>ارفع أعمالك فوراً</h3>
+                <p>لا حاجة لانتظار شهور لبناء موقع. نحن نوفر لك منصة كاملة، فقط ارفع صور شغلك وأسعارك وابدأ البيع في نفس اليوم.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-store-alt"></i>
+                <h3>موقع للإيجار (جاهز)</h3>
+                <p>نحن نؤجر لك "بنية تحتية". أنت تستلم موقعاً مربوطاً بأنظمة إدارة قوية وحماية كاملة مقابل اشتراك شهري بسيط.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-brain"></i>
+                <h3>ذكاء اصطناعي مدمج</h3>
+                <p>المنصة ليست مجرد عرض، بل تحتوي على أدوات AI لتحليل بيانات عملائك وزيادة مبيعاتك بذكاء.</p>
+            </div>
         </div>
-        <div class="service-card">
-            <i class="fas fa-database"></i>
-            <h3>تحليل البيانات الضخمة</h3>
-            <ul>
-                <li><strong>لوحات التحكم (Dashboards):</strong> مراقبة حية ومباشرة لأداء فروعك ومخازنك.</li>
-                <li><strong>تقارير استباقية:</strong> تحويل الأرقام الصامتة إلى توصيات نمو ملموسة.</li>
-                <li><strong>تكامل IBA Global:</strong> دمج بيانات التجارة الفعلية في نماذجك التحليلية.</li>
-            </ul>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-chart-pie"></i>
-            <h3>التسويق الرقمي الموجه</h3>
-            <ul>
-                <li><strong>استهداف ذكي (targeting):</strong> الوصول لعملاء الجملة والمستوردين في العراق والخليج بدقة جراحية.</li>
-                <li><strong>السمعة الرقمية:</strong> صناعة محتوى يضع مؤسستك كقائد رأي (Thought Leader) في مجالها.</li>
-                <li><strong>تحليل الحملات:</strong> قرارات تسويقية تعتمد على سلوك العملاء الحقيقي.</li>
-            </ul>
-        </div>
-        <div class="service-card">
-            <i class="fas fa-cogs"></i>
-            <h3>نظم ERP (Odoo Partner)</h3>
-            <ul>
-                <li><strong>تطبيق معتمد:</strong> تطبيق كافة موديولات Odoo (المخازن، الحسابات، CRM) بتفويض رسمي.</li>
-                <li><strong>تخصيص مدعوم بـ AI:</strong> ندمج محركات Vortex 360 الذكية داخل بيئة Odoo.</li>
-                <li><strong>الربط الضريبي:</strong> الفاتورة الإلكترونية والربط مع مصلحة الضرائب المصرية.</li>
-            </ul>
+
+        <div class="explain-box">
+            <h3 style="color: var(--gold);"><i class="fas fa-lightbulb"></i> كيف تعمل خدمة الإيجار؟</h3>
+            <p style="font-size: 1.2rem; line-height: 1.8;">
+                بدلاً من دفع تكاليف البرمجة والسيرفرات الباهظة، أنت تستأجر "محل رقمي" جاهز في مول Vortex 360. 
+                أنت المسؤول عن المحتوى والشغل، ونحن المسؤولون عن تشغيل "ماكينة" الموقع وتطويرها وضمان وصول الزوار إليها.
+            </p>
         </div>
     </div>
 
-    <section class="footer-section">
-        <h2>تواصل مع الشريك التقني المعتمد للتوقيع</h2>
-        <div style="margin: 40px 0; font-size: 1.2rem;">
-            <div><i class="fas fa-phone"></i> 01017979565 | 01044581140 | 01114000122</div>
-            <div><i class="fas fa-envelope"></i> acalyaly3@gmail.com</div>
-        </div>
-        <a href="https://wa.me/201017979565" class="social-btn wa"><i class="fab fa-whatsapp"></i> واتساب بيزنس</a>
-        <a href="https://www.linkedin.com/groups/17618054" class="social-btn li"><i class="fab fa-linkedin"></i> LinkedIn Group</a>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Vortex 360 | Authorized Odoo Partner | Powered by IBA Global</p>
+    <footer style="padding: 60px; background: #000;">
+        <p>تواصل مع المدير التنفيذي: 01017979565 | acalyaly3@gmail.com</p>
+        <p>&copy; 2026 Vortex 360 | Powered by IBA Global</p>
     </footer>
 
 </body>
