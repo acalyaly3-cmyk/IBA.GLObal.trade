@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vortex 360 | التحول الرقمي والذكاء الاصطناعي</title>
+    <title>Vortex 360 | شريك Odoo المعتمد والذكاء الاصطناعي</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root { --primary: #004e92; --secondary: #000428; --accent: #00d2ff; --gold: #ffd700; --white: #ffffff; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: var(--secondary); color: var(--white); text-align: center; overflow-x: hidden; }
+        :root { --primary: #004e92; --secondary: #000428; --accent: #00d2ff; --gold: #ffd700; --odoo-purple: #714B67; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; background: var(--secondary); color: white; text-align: center; }
         
-        /* هيدر سينمائي */
-        header { padding: 150px 20px; background: linear-gradient(rgba(0,4,40,0.85), rgba(0,78,146,0.85)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1500'); background-size: cover; background-position: center; border-bottom: 5px solid var(--accent); position: relative; }
-        h1 { font-size: 4.5rem; margin: 0; color: var(--accent); text-shadow: 0 0 30px var(--accent); text-transform: uppercase; }
-        .tagline { font-size: 1.6rem; color: var(--gold); margin: 20px 0; font-weight: bold; }
+        header { padding: 120px 20px; background: linear-gradient(rgba(0,4,40,0.8), rgba(0,78,146,0.8)), url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1500'); background-size: cover; border-bottom: 5px solid var(--odoo-purple); }
         
-        /* أزرار التحرك السريع */
-        .cta-group { margin-top: 30px; }
-        .btn-main { display: inline-block; padding: 18px 45px; background: var(--gold); color: var(--secondary); text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.2rem; transition: 0.4s; border: 2px solid transparent; }
-        .btn-main:hover { background: transparent; color: var(--gold); border-color: var(--gold); transform: scale(1.05); }
+        .partner-badge { display: inline-block; background: white; padding: 10px 25px; border-radius: 50px; margin-bottom: 20px; box-shadow: 0 0 20px rgba(113, 75, 103, 0.5); }
+        .partner-badge img { height: 40px; vertical-align: middle; }
+        .partner-badge span { color: var(--odoo-purple); font-weight: bold; margin-right: 10px; font-size: 1.1rem; }
 
-        /* شبكة الخدمات المطورة */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; padding: 80px 20px; max-width: 1300px; margin: 0 auto; }
-        .service-card { background: rgba(255, 255, 255, 0.03); padding: 40px; border-radius: 30px; border: 1px solid rgba(0, 210, 255, 0.1); transition: 0.5s; position: relative; }
-        .service-card:hover { transform: translateY(-20px); background: rgba(0, 210, 255, 0.1); border-color: var
+        .btn-odoo { background: var(--odoo-purple); color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 20px; transition: 0.3s; }
+        .btn-odoo:hover { transform: scale(1.1); box-shadow: 0 0 20px var(--odoo-purple); }
+
+        .service-card { background: rgba(255, 255, 255, 0.05); padding: 35px; border-radius: 25px; border: 1px solid rgba(113, 75, 103, 0.3); transition: 0.4s; }
+        .service-card:hover { border-color: var(--gold); transform: translateY(-10px); }
+        .service-card i { font-size: 3.5rem; color: var(--accent); margin-bottom: 20px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="partner-badge">
+            <span>Official Partner</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Odoo_logo.svg/1200px-Odoo_logo.svg.png" alt="Odoo Logo">
+        </div>
+        <h1>VORTEX 360</h1>
+        <p style="font-size: 1.5rem; color: var(--gold);">الحلول الذكية المعتمدة عالمياً</p>
+        <p>بإشراف الخبير المعتمد: <strong>علي إبراهيم</strong></p>
+        <a href="https://wa.me/201017979565" class="btn-odoo"><i class="fas fa-rocket"></i> اطلب استشارة Odoo +
